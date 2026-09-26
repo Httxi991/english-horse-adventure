@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#173f35"><meta name="description" content="Saddle up for a playful English learning adventure. Ride, stop, learn, and earn your stars.">
+<title>English Horse Adventure</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css">
+<script defer src="js/questions.js"></script><script defer src="js/engine.js"></script><script defer src="js/game.js"></script>
+</head>
+<body>
+<header class="header"><a class="brand" href="./" aria-label="English Horse Adventure home"><span class="brand-icon" aria-hidden="true">✦</span><span>ENGLISH HORSE<span class="brand-sub">ADVENTURE</span></span></a><div class="header-right"><span class="header-note">A little ride. A lot to learn.</span><button class="icon-button" id="soundToggle" aria-label="Mute sound" title="Mute sound">♫</button></div></header>
+<main>
+<section id="home" class="home">
+<div class="home-top"><span class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</span><span id="savedLabel" class="save-label">Made for curious minds</span></div>
+<div class="home-grid">
+<div class="hero-scene"><canvas id="homeCanvas" aria-label="A cartoon horse in a sunny green meadow"></canvas><div class="scene-copy"><span class="pill">RIDE • LEARN • EXPLORE</span><h1>Big adventures.<br>Little discoveries.</h1><p>Five stops. New words.<br>One brilliant adventure.</p></div><span class="scene-tag">01 / THE SUNNY MEADOW</span></div>
+<div class="start-panel"><div><span class="eyebrow">WELCOME, EXPLORER</span><h2>Ready to ride?</h2><p>Pick your companion and follow the trail.</p></div>
+<button class="setting-row" id="horseMenu"><span class="row-symbol">♞</span><span><small>Choose Your Horse</small><strong id="horseLabel">Maple</strong></span><span aria-hidden="true">›</span></button>
+<button class="setting-row" id="difficultyMenu"><span class="row-symbol">⚑</span><span><small>Difficulty</small><strong id="difficultyLabel">Beginner</strong></span><span aria-hidden="true">›</span></button>
+<div class="trail-preview"><div><span>YOUR TRAIL</span><span>5 learning stops</span></div><div class="trail-dots" aria-hidden="true"><b>1</b><i></i><b>2</b><i></i><b>3</b><i></i><b>4</b><i></i><b>5</b><span>⚑</span></div></div>
+<button id="play" class="primary">Play <span aria-hidden="true">→</span></button><button id="resume" class="secondary" hidden>Continue Adventure</button>
+<div class="panel-links"><button id="howMenu">How to Play</button><span>·</span><button id="settingsMenu">Settings</button></div>
+</div></div>
+<div class="home-footer"><span><span class="tiny-star">✦</span> Every stop is a step forward.</span><span id="record">Learn at your own pace</span></div>
+</section>
+<section id="game" hidden aria-label="Adventure game">
+<div class="game-top"><div><span class="eyebrow" id="levelLabel">BEGINNER • SUNNY MEADOW</span><h1>Follow your curiosity.</h1></div><button id="pause" class="secondary">Ⅱ <span>Pause</span></button></div>
+<div class="hud"><div><small>Score</small><strong id="score">0</strong></div><div class="progress-block"><div><small>Progress</small><span id="progressText">0 / 5</span></div><progress id="progress" max="5" value="0">0 / 5</progress></div><div><small>Remaining Stops</small><strong id="remaining">5</strong></div></div>
+<div class="game-scene"><canvas id="gameCanvas" tabindex="0" role="img" aria-label="Ride right along the meadow path. Your horse automatically stops at each question."></canvas><div class="scene-location"><span class="location-dot"></span> THE SUNNY MEADOW</div><div id="nextStop" class="next-stop">Next stop: 1</div></div>
+<div class="game-bottom"><div><strong id="rideStatus" aria-live="polite">Let's go, explorer!</strong><p>Ride right to the next STOP sign.</p></div><div class="keyboard-hint"><kbd>W</kbd><span><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span><small>or arrow keys</small></div><div class="touch-controls" aria-label="Touch movement controls"><button data-dir="up" class="up" aria-label="Move up">↑</button><button data-dir="left" class="left" aria-label="Ride left">←</button><button data-dir="down" class="down" aria-label="Move down">↓</button><button data-dir="right" class="right" aria-label="Ride right">→</button></div></div>
+</section>
+</main>
+<footer class="footer"><span>English Horse Adventure</span><span>Small steps. Growing confidence.</span></footer>
+<dialog id="modal" aria-labelledby="modalTitle"><div id="modalBody"></div></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+</body></html>
